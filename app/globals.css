@@ -1,0 +1,44 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --watermark: rgba(0,0,0,0.06);
+}
+
+body {
+  @apply bg-white text-slate-900;
+  min-height: 100vh;
+}
+
+/* Watermark: R5W */
+.wm::before {
+  content: "R5W - Tech";
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-size: 14rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  color: var(--watermark);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm dark:bg-slate-900 dark:border-slate-700;
+}
+.muted {
+  @apply text-slate-600 dark:text-slate-300;
+}
+.heading {
+  @apply text-slate-900 dark:text-white;
+}
+.chip {
+  @apply rounded-full border border-slate-200 bg-white dark:bg-slate-900 dark:border-slate-700 px-2 py-0.5 text-xs text-slate-600 dark:text-slate-300;
+}
