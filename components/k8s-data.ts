@@ -5,7 +5,9 @@ export type K8sItem = {
   blurb: string
   details?: string
   icon: string
-    yaml?: string
+  snippet?: string
+  yaml?: string
+  href?: string
 }
 
 // Minimal SVG paths encoded as strings to avoid external assets
