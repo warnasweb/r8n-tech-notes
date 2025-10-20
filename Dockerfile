@@ -3,6 +3,7 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
+RUN mkdir -p public
 COPY package.json package-lock.json* ./
 RUN npm ci
 COPY . .
